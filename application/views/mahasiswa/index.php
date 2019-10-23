@@ -1,4 +1,11 @@
 <div class="container">
+	<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+	<?php if ($this->session->flashdata('flash')) : ?>
+
+		<?= $this->session->flashdata('flash'); ?>
+
+	<?php endif; ?>
+
 	<div class="row mt-3">
 		<div class="col-md-6">
 			<a href="<?= base_url(); ?>mahasiswa/tambah" class="btn btn-primary">Tambah Data Mahasiswa</a>
